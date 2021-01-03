@@ -1083,9 +1083,9 @@ button:focus {
   color: #fff;
 }
 
-.dark-vertion p {
+/* .dark-vertion p {
   color: #fff;
-}
+} */
 
 .dark-vertion address {
   color: #fff;
@@ -2028,8 +2028,8 @@ font-size: 23px;
 }
 
 .mh-teacher{
-  padding: 100px!important;
-  background-color: #202026;
+  padding: 0px!important;
+  /* background-color: #202026; */
 }
 
 /*
