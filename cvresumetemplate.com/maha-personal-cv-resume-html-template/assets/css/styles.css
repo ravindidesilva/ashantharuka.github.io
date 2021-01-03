@@ -1389,14 +1389,21 @@ li .fa {
 }
 
 .mh-header .navbar-nav li {
-  margin: 0 20px;
+  margin: 0 15px;
+}
+.navbar-brand{
+  margin-left: 30px;
+}
+#navbarSupportedContent{
+  margin-right: 30px;
 }
 
 .mh-header .navbar-nav li a {
+  text-transform: capitalize!important;
   border-bottom: 1px solid transparent;
   font-weight: bold;
   font-family: "roboto", sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   opacity: 1;
   line-height: 30px;
 }
