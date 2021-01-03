@@ -42,7 +42,56 @@
         <link rel="alternate stylesheet" href="assets/css/colors/purple.css" title="purple"> 
         <link rel="alternate stylesheet" href="assets/css/colors/slate.css" title="slate">
         <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow">
-        
+        <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $AutoPlaySteps: 5,
+              $SlideDuration: 160,
+              $SlideWidth: 350,
+              $SlideSpacing: 3,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $Steps: 5
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 16,
+                $SpacingY: 16
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
     </head>
     <body class="dark-vertion black-bg">
         
@@ -96,7 +145,7 @@
                                     <a class="nav-link" href="#mh-portfolio">TESTIMONIALS</a>
                                 </li>
                                 <li class="nav-item">
-                                   <a class="nav-link" href="#mh-contact">GALLERY</a>
+                                   <a class="nav-link" href="#mh-gallery">GALLERY</a>
                                 </li>
                             </ul>
                         </div>
@@ -122,9 +171,9 @@
                                 
                                 <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Ravindi De Silva</h2>
                                 <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">Department of English Language Teaching
-									University of Kelaniya
-									
-									SRI LANKA</h4>
+University of Kelaniya
+
+SRI LANKA</h4>
                                 
                                 <ul>
                                     <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><i class="fa fa-envelope"></i><a href="mailto:">ravindi1234@gmail.com</a></li>
@@ -159,31 +208,21 @@
         <section class="mh-about" id="mh-about">
             <div class="container">
                 <div class="row section-separator">
-                    <div class="col-sm-12 col-md-6">
+					<div class="col-sm-12 col-md-6">
                         <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                             <img src="assets/images/ab-img.png" alt="" class="img-fluid">
                         </div>
-                    </div>
+					</div>
+					
                     <div class="col-sm-12 col-md-6">
                         <div class="mh-about-inner">
                             <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, I’m a Patrick, web-developer based on Paris. 
-                            I have rich experience in web site design & building 
-                            and customization. Also I am good at</p>
-                            <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                <ul>
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>php</span></li>
-                                    <li><span>wordpress</span></li>
-                                    <li><span>React</span></li>
-                                    <li><span>Javascript</span></li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Downlaod CV <i class="fa fa-download"></i></a>
+                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">I am a 23-year-old final year undergraduate at the University of Kelaniya, reading for a degree in Teaching English as a Second Language.  As part of the TESL Teaching Practicum/ Internship course we were required to select 6 or more students of our choice who can commit for a month-long English program and conduct the sessions via zoom.  This portfolio contains the details of my experience as an intern including the lesson plans, testimonials, teaching philosophy and reflective summaries.</p>
+                            
+                            <!-- <a href="#" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Downlaod CV <i class="fa fa-download"></i></a> -->
                         </div>
-                    </div>
+					</div>
+					
                 </div>
             </div>
         </section>
@@ -374,108 +413,18 @@
             <div class="home-v-img">
                 <div class="container">
                     <div class="row section-separator">
-                        <div class="section-title text-center col-sm-12">
-                            <!--<h2>Skills</h2>-->
+                        <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                            <h3>TEACHING PHILOSOPHY</h3>
                         </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-skills-inner">
-                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                    <h3>Technical Skills</h3>
-                                    <div class="each-skills">
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Javascript</div>
-                                                    <div class="percentagem-num">86%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 86%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Java</div>
-                                                    <div class="percentagem-num">46%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 46%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Python</div>
-                                                    <div class="percentagem-num">38%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 38%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">PHP</div>
-                                                    <div class="percentagem-num">17%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 17%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>                                    
-                                        
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">Python</div>
-                                                    <div class="percentagem-num">38%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 38%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">PHP</div>
-                                                    <div class="percentagem-num">17%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 17%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                <h3>Professional Skills</h3>
-                                <ul class="mh-professional-progress">
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="95"></div>
-                                        <div class="pr-skill-name">Communication</div>
-                                    </li>
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="55"></div> 
-                                        <div class="pr-skill-name">Team Work</div>
-                                    </li>
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="86"></div>
-                                        <div class="pr-skill-name">Project Management</div>
-                                    </li> 
-                                    <li>
-                                        <div class="mh-progress mh-progress-circle" data-progress="60"></div>
-                                        <div class="pr-skill-name">Creativity</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <div class="mh-teacher shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                <div class="quoate"style="text-align: center;"><strong>“ The secret in education lies in respecting the student” – Ralph Waldo-</strong> </div><br>
+<div class="philosophy">As I see learning is not just a single act but it is a process where we should step into many levels. For the success of this process the teacher has a great role to play. I believe that this role of a teacher should not be limited just to a speaker. A teacher should be and interactor, communicator as well as an active participant in the session. It is a skill of the teacher to make the lessons more interactive and effective. According to Ever Garrison a teacher is a compass that activates the magnets of curiosity, knowledge and wisdom in the pupils. As a trainee teacher I have experienced being a versatile teacher would help to make the lesson more effective to the students. This includes having conversations with students, playing fun games, give them chances to ask questions, peer discussions, group activities and many other class room activities.  
+
+	My primary goal as a teacher, is to make my students stepping ahead each day than the previous day. I firmly believe that for this purpose the dedication and the skills of a teacher are the required key factors. This was experienced by me since I was a child where my school teachers put their fullest effort to shaped me into the person I am today. Being an undergraduate in this course (TESL) filled me with immense experiences and trained me to be a good teacher. What I have learnt from all my teachers and lecturers has taught me to be a versatile teacher who has a duty and responsibility towards his/her students.
+	One of my major responsibilities as a teacher is to keep my attention on every individual student. The students’ needs may differ from each other though they would sit in a one classroom. Thus understanding each student well is the responsibility of me in my teaching life. It is a great pleasure to see the improvement of the students’ and their enthusiasm in the classroom. And it is my duty to make them enjoy the lessons by creating my lessons in the way that they would actively participate. I firmly believe that being with students is a therapy to a teacher.   </div>
+                            </div>  
+                        </div>                    
                     </div>
                 </div>
             </div>
@@ -876,80 +825,63 @@
         
         <!--
         ===================
-           Testimonial
+           Gallery
         ===================
         -->
-        <section class="mh-testimonial" id="mh-testimonial">
+        <section class="mh-gallery" id="mh-gallery">
             <div class="home-v-img">
                 <div class="container">
                     <div class="row section-separator">
                         <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            <h3>Client Reviews</h3>
+                            <h3>Gallery</h3>
                         </div>
-                        <div class="col-sm-12 wow fadeInUp" id="mh-client-review" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>                    
-                            
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>                    
-                            
-                            <div class="each-client-item">
-                                <div class="mh-client-item dark-bg black-shadow-1">
-                                    <img src="assets/images/c-1.png" alt="" class="img-fluid">
-                                    <p>Absolute wonderful ! I am completely
-                                    blown away.The very best.I was amazed
-                                    at the quality</p>
-                                    <h4>John Mike</h4>
-                                    <span>CEO, Author.Inc</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:500px;overflow:hidden;visibility:hidden;">
+							<!-- Loading Screen -->
+							<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+								<img style="margin-top:-19px;position:relative;top:50%;width:20px;height:20px;" src="img/spin.svg" />
+							</div>
+							<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:500px;overflow:hidden;">
+								<div>
+									<img data-u="image" src="img/p1.jpeg" />
+								</div>
+								<div>
+									<img data-u="image" src="img/p2.jpeg" />
+								</div>
+								<div>
+									<img data-u="image" src="img/p3.jpeg" />
+								</div>
+								<div>
+									<img data-u="image" src="img/p4.jpeg" />
+								</div>
+								<div>
+									<img data-u="image" src="img/p5.jpeg" />
+								</div>
+								<div>
+									<img data-u="image" src="img/p6.jpeg" />
+								</div>
+
+					
+							</div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">web animation composer</a>
+							<!-- Bullet Navigator -->
+							<div data-u="navigator" class="jssorb057" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+								<div data-u="prototype" class="i" style="width:14px;height:14px;">
+									<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+										<circle class="b" cx="8000" cy="8000" r="5000"></circle>
+									</svg>
+								</div>
+							</div>
+							<!-- Arrow Navigator -->
+							<div data-u="arrowleft" class="jssora073" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+								<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+									<path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+								</svg>
+							</div>
+							<div data-u="arrowright" class="jssora073" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+								<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+									<path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+								</svg>
+							</div>
+						</div>
                     </div>
                 </div>
             </div>
@@ -970,31 +902,22 @@
                         <div class="container mt-30">
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 mh-footer-address">
-                                    <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item dark-bg shadow-1 media wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                            <div class="each-icon">
-                                                <i class="fa fa-location-arrow"></i>
-                                            </div>
-                                            <div class="each-info media-body">
-                                                <h4>Address</h4>
-                                                <address>
-                                                    5th Avenue, 34th floor, <br> 
-                                                     New york
-                                                </address>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                                    <div class="col-sm-12 xs-no-padding ">
+                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp  wrapper" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                             <div class="each-icon">
                                                 <i class="fa fa-envelope-o"></i>
                                             </div>
                                             <div class="each-info media-body">
                                                 <h4>Email</h4>
-                                                <a href="mailto:yourmail@email.com">ravindi1234@gmail.com</a><br>
-                                            </div>
+												<a href="mailto:ravindi1234@gmail.com">ravindi1234@gmail.com</a><br>
+												
+											</div>
+											<span class="tooltip">Click on the mail to contact</span>
                                         </div>
                                     </div>
+                                    
+                                </div>
+                                <div class="col-sm-12 col-md-6 mh-footer-address">
                                     <div class="col-sm-12 xs-no-padding">
                                         <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                             <div class="each-icon">
@@ -1002,37 +925,10 @@
                                             </div>
                                             <div class="each-info media-body">
                                                 <h4>Phone</h4>
-                                                <a href="callto:(880)-8976-987">+94716359879</a><br>
+                                                <a href="callto:94716359879">+94716359879</a><br>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                    <form id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <input name="name" class="contact-name form-control" id="name" type="text" placeholder="First Name" required>
-                                            </div>
-                
-                                            <div class="col-sm-12">
-                                                <input name="name" class="contact-email form-control" id="L_name" type="text" placeholder="Last Name" required>
-                                            </div>
-                
-                                            <div class="col-sm-12">
-                                                <input name="name" class="contact-subject form-control" id="email" type="email" placeholder="Your Email" required>
-                                            </div>
-                
-                                            <div class="col-sm-12">
-                                                <textarea class="contact-message" id="message" rows="6" placeholder="Your Message" required></textarea>
-                                            </div>
-                                            
-                                            <!-- Subject Button -->
-                                            <div class="btn-form col-sm-12">
-                                                <button type="submit" class="btn btn-fill btn-block" id="form-submit">Send Message</button>
-                                            </div>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -1046,7 +942,8 @@
     * JS Files *
     ==============
     -->
-    
+	<script type="text/javascript">jssor_1_slider_init();
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
     <!-- jQuery -->
